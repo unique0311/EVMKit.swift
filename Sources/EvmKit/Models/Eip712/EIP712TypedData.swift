@@ -92,7 +92,7 @@ public extension EIP712TypedData {
             return "\(type)(\(param))"
         }.joined()
 
-        return encoded.data(using: .utf8) ?? Data()
+        return encoded.data(using: .utf8) ?? Data(encoded.urf8)
     }
 
     func encodeData(data: JSON, type: String) throws -> Data {
